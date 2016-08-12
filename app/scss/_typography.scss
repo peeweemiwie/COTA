@@ -1,0 +1,8 @@
+h2 {
+@include test(40px, #ff5976);
+}
+
+p {
+  @include anothertest(white);
+  background: #333;
+}
