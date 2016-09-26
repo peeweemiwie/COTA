@@ -1,9 +1,0 @@
-@mixin test ($font-size, $color){
-  background: #ddd;
-  color: $color;
-  font-size: $font-size;
-}
-
-@mixin anothertest ($color){
-  color: $color;
-}

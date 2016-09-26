@@ -1,0 +1,23 @@
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  border-bottom: 1px solid $gray-80;
+  color: $gray-30;
+  font-size: 4rem;
+  text-align: center;
+  margin: 0 auto 4rem;
+  width: 90%;
+}
+
+h1,
+h2 {
+  font-family: $raleway;
+  text-transform: capitalize;
+}
+
+h2 {
+  color: $gray-10;
+  font-size: 1.8rem;
+}

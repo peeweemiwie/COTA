@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lighten($black, 90%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.page-wrapper {
+  @extend .clearfix;
+  background-color: $white;
+  border: 1px solid $gray-95;
+  border-radius: .5rem;
+  box-shadow: 2px 2px 5px 0px rgba(115,115,115,0.5);
+  margin: 0 auto;
+  max-width: 65rem;
+  padding: 2rem;
+  width: 100%;
+}
+
+main,
+.right-rail {
+  float: left;
+  padding: 1rem;
+}
+
+main {
+  width: 70%;
+}
+
+.right-rail {
+  width: 30%;
+}
+
+.right-rail > * {
+  margin-bottom: 4rem;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  main,
+  .right-rail {
+    float: none;
+    padding: 1rem;
+    width: 100%;
+  }
+}

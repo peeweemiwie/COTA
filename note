@@ -1,0 +1,9 @@
+1. Display the following array of objects in a table, with column headers "Year" and "Movie".
+
+2. Include a simple form with two text inputs and a submit button that allows the user to add a new year and movie to the list.
+
+3. Include buttons for sorting by year (oldest to newest), sorting by movie (A - Z) and sorting randomly.
+
+4. While the CSS is not important for this exercise, do include some basic styling as you see fit.
+
+5. You can use whatever technology you'd like (vanilla JS, JQuery, AngularJS, etc.).

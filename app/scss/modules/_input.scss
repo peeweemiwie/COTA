@@ -1,0 +1,20 @@
+.input-wrapper{
+  span {
+    border-bottom: 1px solid $gray-80;
+    display: block;
+    margin-bottom: .5rem;
+  }
+
+  input {
+    border: 0;
+  }
+
+  button {
+    @extend .button;
+  }
+
+  label {
+    color: $gray-30;
+    font-size: 1.2rem;
+  }
+}

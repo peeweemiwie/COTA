@@ -5,6 +5,7 @@ var gulp    = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     rename  = require('gulp-rename'),
     browserSync = require('browser-sync'),
+    del     = require('del'),
     reload  = browserSync.reload;
 
 var inputJs   = 'app/js/**/*.js',
@@ -36,13 +37,76 @@ gulp.task('html', function(){
   .pipe(reload({stream: true}))
 });
 
-gulp.task('browser-sync', function(){
-  browserSync({
-    server: {
-      baseDir: './app/'
-    }
-  });
+// ////////////////////////////////////////////////
+// Browser-Sync Tasks
+// // /////////////////////////////////////////////
+
+gulp.task('browser-sync', function() {
+    browserSync({
+        server: {
+            baseDir: "./app/"
+        }
+    });
 });
+
+// task to run build server for testing final app
+// gulp.task('build:serve', function() {
+//     browserSync({
+//         server: {
+//             baseDir: "./build/"
+//         }
+//     });
+// });
+
+// ////////////////////////////////////////////////
+// Build Tasks
+// // /////////////////////////////////////////////
+
+gulp.task('build:cleanfolder', function(cb){
+  // del([
+  //   'build/**/*'
+  // ], cb);
+  console.log(2);
+});
+
+gulp.task('build:copy', ['build:cleanfolder'], function(){
+//gulp.task('build:copy', function(){
+  return gulp.src('app/**/*/')
+  .pipe(gulp.dest('build/'))
+  console.log(1);
+});
+
+//gulp.task('build:remove', ['build:copy'], function(cb){
+gulp.task('build:remove', function(){
+  // del([
+  //   'build/scss/',
+  //   'build/js/!(*.min.js)'
+  // ], cb);
+  console.log(3);
+});
+
+//gulp.task('build', ['build:copy', 'build:remove']);
+gulp.task('build', ['build:copy']);
+
+// ////////////////////////////////////////////////
+// Browser-Sync Tasks
+// // /////////////////////////////////////////////
+
+// gulp.task('browser-sync', function(){
+//   browserSync({
+//     server: {
+//       baseDir: './app/'
+//     }
+//   });
+// });
+//
+// gulp.task('build:serve', function(){
+//   browserSync({
+//     server: {
+//       baseDir: './build/'
+//     }
+//   });
+// });
 
 gulp.task('watch', function(){
   gulp.watch(inputJs, ['scripts']);

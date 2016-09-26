@@ -1,0 +1,32 @@
+.button {
+  background-color: $white;
+  border: 1px solid $gray-80;
+  border-radius: 1rem;
+  color: $gray-30;
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+  padding: .5rem;
+  transition: background-color .3s;
+  width: 100%;
+  &:disabled,
+  &:disabled:hover {
+    background-color: $gray-95;
+  }
+  &:disabled:hover {
+    cursor: not-allowed;
+  }
+  &:hover {
+    background-color: $gray-80;
+    cursor: pointer;
+    transition: background-color .3s;
+  }
+}
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
